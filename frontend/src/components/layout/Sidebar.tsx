@@ -19,13 +19,7 @@ const Sidebar: React.FC = () => {
         );
     };
 
-    const getCategoryBadgeClass = (categoryName: string) => {
-        if (categoryName.includes('Searching')) return 'badge-searching';
-        if (categoryName.includes('Graph')) return 'badge-graph';
-        if (categoryName.includes('CPU')) return 'badge-cpu';
-        if (categoryName.includes('Advanced')) return 'badge-advanced';
-        return 'badge-sorting';
-    };
+
 
     return (
         <div className="w-80 bg-slate-900 border-r border-slate-700 h-screen overflow-y-auto scrollbar-thin flex flex-col">

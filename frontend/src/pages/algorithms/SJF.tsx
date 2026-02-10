@@ -17,7 +17,7 @@ const SJF: React.FC = () => {
         ]
     };
 
-    const [inputs, setInputs] = useState(defaultInputs);
+    const [, setInputs] = useState(defaultInputs);
 
     const algorithmData: AlgorithmData = {
         id: 'sjf',

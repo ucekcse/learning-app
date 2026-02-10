@@ -18,8 +18,7 @@ const MinMaxVisualizer: React.FC<MinMaxVisualizerProps> = ({
     mid,
     min,
     max,
-    message,
-    depth = 0
+    message
 }) => {
     return (
         <div className="space-y-6">

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Play, Loader } from 'lucide-react';
-import { runPythonCode } from '../../utils/pyodideRunner';
+
 
 interface CodeEditorProps {
     defaultCode?: string;

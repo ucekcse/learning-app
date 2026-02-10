@@ -12,7 +12,7 @@ const TSPExact: React.FC = () => {
     const [currentEdge, setCurrentEdge] = useState<{ from: number; to: number } | undefined>();
     const [message, setMessage] = useState('Click Re-generate to create cities');
     const [isPlaying, setIsPlaying] = useState(false);
-    const [minDist, setMinDist] = useState(Infinity);
+    const [, setMinDist] = useState(Infinity);
 
     // Refs for animation loop
     const isPlayingRef = React.useRef(false);

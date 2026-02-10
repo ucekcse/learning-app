@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Play, Pause, RotateCcw, SkipForward } from 'lucide-react';
 
 interface ArrayVisualizerProps {
-    array: number[];
+    array: number[] | string[];
     currentIndex?: number;
     comparingIndices?: number[];
     sortedIndices?: number[];
@@ -38,7 +38,9 @@ const ArrayVisualizer: React.FC<ArrayVisualizerProps> = ({
         return 'array-element';
     };
 
-    const maxValue = Math.max(...array);
+    const maxValue = array.length > 0 && typeof array[0] === 'number'
+        ? Math.max(...(array as number[]))
+        : 0;
 
     return (
         <div className="space-y-4">
@@ -99,7 +101,9 @@ const ArrayVisualizer: React.FC<ArrayVisualizerProps> = ({
             <div className="bg-dark-elevated rounded-lg p-8 border border-dark-border">
                 <div className="flex items-end justify-center gap-2 min-h-[300px]">
                     {array.map((value, index) => {
-                        const height = (value / maxValue) * 250;
+                        const height = typeof value === 'number' && maxValue > 0
+                            ? (value / maxValue) * 250
+                            : 50; // Fixed height for non-numbers
                         return (
                             <div key={index} className="flex flex-col items-center gap-2">
                                 {/* Bar */}

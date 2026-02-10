@@ -29,8 +29,8 @@ const TreeVisualizer: React.FC<TreeVisualizerProps> = ({
     onReset,
     onStep
 }) => {
-    const calculatePositions = (node: TreeNode | null, x: number, y: number, offset: number): TreeNode | null => {
-        if (!node) return null;
+    const calculatePositions = (node: TreeNode | null, x: number, y: number, offset: number): TreeNode | undefined => {
+        if (!node) return undefined;
 
         const newNode = { ...node, x, y };
 
@@ -44,10 +44,10 @@ const TreeVisualizer: React.FC<TreeVisualizerProps> = ({
         return newNode;
     };
 
-    const renderTree = (node: TreeNode | null): JSX.Element[] => {
+    const renderTree = (node: TreeNode | null): React.ReactElement[] => {
         if (!node) return [];
 
-        const elements: JSX.Element[] = [];
+        const elements: React.ReactElement[] = [];
         const isHighlighted = highlightedNodes.includes(node.id);
 
         // Draw edges to children

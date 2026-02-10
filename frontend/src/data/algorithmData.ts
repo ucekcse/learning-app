@@ -1,4 +1,4 @@
-import type { AlgorithmData } from '../types';
+
 
 export const algorithmCategories = [
     {

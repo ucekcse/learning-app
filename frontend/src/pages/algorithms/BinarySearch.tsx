@@ -136,10 +136,10 @@ print(f"Target: {target}")`,
         const nodes: TreeNode[] = [];
         let nodeId = 0;
 
-        const search = (left: number, right: number, depth: number): TreeNode | null => {
+        const search = (left: number, right: number, depth: number): TreeNode | undefined => {
             if (left > right) {
                 steps.push({ message: `Search space empty (left=${left}, right=${right})`, nodeIds: [] });
-                return null;
+                return undefined;
             }
 
             const mid = Math.floor((left + right) / 2);
@@ -223,7 +223,7 @@ print(f"Target: {target}")`,
 
     const handleInputChange = (newInputs: any) => {
         const parsedArray = typeof newInputs.array === 'string'
-            ? newInputs.array.split(',').map((v: string) => parseInt(v.trim())).filter((v: number) => !isNaN(v)).sort((a, b) => a - b)
+            ? newInputs.array.split(',').map((v: string) => parseInt(v.trim())).filter((v: number) => !isNaN(v)).sort((a: number, b: number) => a - b)
             : [...newInputs.array].sort((a, b) => a - b);
 
         setInputs({ array: parsedArray, target: newInputs.target });

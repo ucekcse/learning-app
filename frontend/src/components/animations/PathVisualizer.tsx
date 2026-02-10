@@ -102,7 +102,7 @@ const PathVisualizer: React.FC<PathVisualizerProps> = ({
                     })}
 
                     {/* Draw cities */}
-                    {cities.map((city, idx) => {
+                    {cities.map((city) => {
                         const isInPath = path.includes(city.id);
                         const pathIndex = path.indexOf(city.id);
 

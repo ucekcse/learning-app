@@ -4,16 +4,9 @@ import ProsConsSection from '../../components/algorithm/ProsConsSection';
 import WorkingSection from '../../components/algorithm/WorkingSection';
 import ExampleSection from '../../components/algorithm/ExampleSection';
 import CodeEditor from '../../components/algorithm/CodeEditor';
-import InputPanel from '../../components/cpu/InputPanel';
 import GanttChart from '../../components/animations/GanttChart';
 
-interface Process {
-    id: number;
-    name: string;
-    arrivalTime: number;
-    burstTime: number;
-    priority?: number; // Optional to satisfy InputPanel potential types
-}
+
 
 const SRTF: React.FC = () => {
     const defaultInputs = {
@@ -25,7 +18,7 @@ const SRTF: React.FC = () => {
         ]
     };
 
-    const [inputs, setInputs] = useState(defaultInputs);
+    const [inputs] = useState(defaultInputs);
     const [animationState, setAnimationState] = useState({
         ganttBlocks: [] as any[],
         currentTime: 0,
@@ -35,7 +28,7 @@ const SRTF: React.FC = () => {
     });
     const [isPlaying, setIsPlaying] = useState(false);
     const [steps, setSteps] = useState<any[]>([]);
-    const [currentStepIndex, setCurrentStepIndex] = useState(0);
+    const [, setCurrentStepIndex] = useState(0);
 
     const algorithmData: AlgorithmData = {
         id: 'srtf',
