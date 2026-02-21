@@ -63,14 +63,14 @@ const InputPanel: React.FC<InputPanelProps> = ({ defaultInputs, onInputChange, i
     return (
         <div className="card">
             <h2 className="section-title">Interactive Input Panel</h2>
-            <p className="text-gray-400 mb-4 text-sm sm:text-base">
+            <p className="text-gray-500 dark:text-gray-400 mb-4 text-sm sm:text-base">
                 Modify the input values below and click "Apply Changes" to update the visualization.
             </p>
 
             <div className="space-y-4">
                 {inputFields.map((field) => (
                     <div key={field.key}>
-                        <label className="block text-sm font-medium text-gray-300 mb-2">
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                             {field.label}
                         </label>
 
@@ -79,10 +79,10 @@ const InputPanel: React.FC<InputPanelProps> = ({ defaultInputs, onInputChange, i
                                 {(inputs[field.key] || []).map((process: Process, index: number) => (
                                     <div key={index} className="bg-dark-elevated border border-dark-border rounded-lg p-3 sm:p-4">
                                         <div className="flex items-center justify-between mb-3">
-                                            <span className="text-primary-400 font-semibold">{process.id}</span>
+                                            <span className="text-primary-600 dark:text-primary-400 font-semibold">{process.id}</span>
                                             <button
                                                 onClick={() => removeProcess(field.key, index)}
-                                                className="text-red-400 hover:text-red-300 transition-colors"
+                                                className="text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-300 transition-colors"
                                                 title="Remove process"
                                             >
                                                 <Trash2 className="w-4 h-4" />
@@ -90,7 +90,7 @@ const InputPanel: React.FC<InputPanelProps> = ({ defaultInputs, onInputChange, i
                                         </div>
                                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
                                             <div>
-                                                <label className="block text-xs text-gray-400 mb-1">Arrival Time</label>
+                                                <label className="block text-xs text-gray-500 dark:text-gray-400 mb-1">Arrival Time</label>
                                                 <input
                                                     type="number"
                                                     value={process.arrivalTime}
@@ -100,7 +100,7 @@ const InputPanel: React.FC<InputPanelProps> = ({ defaultInputs, onInputChange, i
                                                 />
                                             </div>
                                             <div>
-                                                <label className="block text-xs text-gray-400 mb-1">Burst Time</label>
+                                                <label className="block text-xs text-gray-500 dark:text-gray-400 mb-1">Burst Time</label>
                                                 <input
                                                     type="number"
                                                     value={process.burstTime}
@@ -110,7 +110,7 @@ const InputPanel: React.FC<InputPanelProps> = ({ defaultInputs, onInputChange, i
                                                 />
                                             </div>
                                             <div>
-                                                <label className="block text-xs text-gray-400 mb-1">Priority</label>
+                                                <label className="block text-xs text-gray-500 dark:text-gray-400 mb-1">Priority</label>
                                                 <input
                                                     type="number"
                                                     value={process.priority || 0}

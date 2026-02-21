@@ -120,7 +120,7 @@ const TreeVisualizer: React.FC<TreeVisualizerProps> = ({
         <div className="space-y-4">
             {/* Message Display */}
             <div className="bg-dark-elevated border border-dark-border rounded-lg p-4">
-                <p className="text-gray-300 text-center font-medium">{message || 'Tree visualization'}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-center font-medium">{message || 'Tree visualization'}</p>
             </div>
 
             {/* Tree Canvas */}

@@ -220,7 +220,7 @@ sjf_scheduling(processes)`,
     };
 
     return (
-        <div className="min-h-screen bg-slate-50 dark:bg-slate-900 p-3 sm:p-8">
+        <div className="min-h-screen bg-surface-50 dark:bg-dark-950 p-3 sm:p-8">
             <div className="max-w-7xl mx-auto space-y-8">
                 <div className="card">
                     <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-50 mb-2">{algorithmData.title}</h1>
@@ -230,8 +230,8 @@ sjf_scheduling(processes)`,
                 <div className="card">
                     <h2 className="section-title">What is Shortest Job First?</h2>
                     <p className="text-gray-700 dark:text-gray-200 leading-relaxed mb-4">{algorithmData.definition}</p>
-                    <div className="bg-blue-100 dark:bg-blue-900/30 border border-blue-300 dark:border-blue-500 rounded-lg p-4">
-                        <h3 className="text-sm font-semibold text-blue-800 dark:text-blue-200 mb-2">Real-World Applications</h3>
+                    <div className="bg-blue-100 dark:bg-primary-50 dark:bg-primary-950/30 border border-primary-200 dark:border-primary-800 rounded-lg p-4">
+                        <h3 className="text-sm font-semibold text-blue-800 dark:text-primary-600 dark:text-primary-300 mb-2">Real-World Applications</h3>
                         <p className="text-blue-900 dark:text-blue-50 text-sm">{algorithmData.realWorldUse}</p>
                     </div>
                 </div>

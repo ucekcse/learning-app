@@ -9,7 +9,7 @@
   }
 
   body {
-    @apply bg-slate-900 text-gray-50 font-sans antialiased;
+    @apply bg-white dark:bg-slate-900 text-gray-900 dark:text-gray-50 font-sans antialiased;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -72,11 +72,11 @@
   }
 
   .card {
-    @apply bg-slate-800 border border-slate-600 rounded-lg p-4 sm:p-6 transition-colors overflow-hidden;
+    @apply bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 rounded-lg p-4 sm:p-6 transition-colors overflow-hidden shadow-sm dark:shadow-none;
   }
 
   .input-field {
-    @apply w-full bg-slate-100 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg px-4 py-2 text-gray-900 dark:text-gray-50 focus:outline-none focus:border-primary-500 transition-colors;
+    @apply w-full bg-slate-50 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-lg px-4 py-2 text-gray-900 dark:text-gray-50 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500/30 transition-colors;
   }
 
   .section-title {
@@ -106,12 +106,44 @@
   .badge-advanced {
     @apply bg-pink-600 text-white;
   }
+
+  /* Theme-aware custom utility classes used across the app */
+  .bg-dark-bg {
+    @apply bg-slate-50 dark:bg-slate-900;
+  }
+
+  .bg-dark-surface {
+    @apply bg-slate-100 dark:bg-slate-800;
+  }
+
+  .bg-dark-elevated {
+    @apply bg-slate-100 dark:bg-slate-800/60;
+  }
+
+  .border-dark-border {
+    @apply border-slate-200 dark:border-slate-700;
+  }
+
+  .text-dark-primary {
+    @apply text-gray-900 dark:text-gray-50;
+  }
+
+  .text-dark-secondary {
+    @apply text-gray-500 dark:text-gray-400;
+  }
 }
 
 @layer utilities {
   .scrollbar-thin {
     scrollbar-width: thin;
+  }
+
+  .dark .scrollbar-thin {
     scrollbar-color: #475569 #1e293b;
+  }
+
+  .scrollbar-thin {
+    scrollbar-color: #cbd5e1 #f1f5f9;
   }
 
   .scrollbar-thin::-webkit-scrollbar {
@@ -119,17 +151,30 @@
     height: 8px;
   }
 
-  .scrollbar-thin::-webkit-scrollbar-track {
+  .dark .scrollbar-thin::-webkit-scrollbar-track {
     background: #1e293b;
   }
 
-  .scrollbar-thin::-webkit-scrollbar-thumb {
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+
+  .dark .scrollbar-thin::-webkit-scrollbar-thumb {
     background: #475569;
     border-radius: 4px;
   }
 
-  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+  }
+
+  .dark .scrollbar-thin::-webkit-scrollbar-thumb:hover {
     background: #64748b;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
   }
 }
 
@@ -175,7 +220,11 @@
 
 /* Array visualization */
 .array-element {
-  @apply border-2 border-gray-600;
+  @apply border-2 border-slate-300 dark:border-gray-600;
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+}
+
+.dark .array-element {
   background: linear-gradient(135deg, #4b5563 0%, #374151 100%);
 }
 

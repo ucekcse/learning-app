@@ -84,8 +84,8 @@ const GraphVisualizer: React.FC<GraphVisualizerProps> = ({
 
             {/* Message */}
             {message && (
-                <div className="bg-primary-900/30 border border-primary-500 rounded-lg p-3">
-                    <p className="text-primary-200 text-sm font-medium">{message}</p>
+                <div className="bg-primary-50 dark:bg-primary-900/30 border border-primary-300 dark:border-primary-500 rounded-lg p-3">
+                    <p className="text-primary-700 dark:text-primary-200 text-sm font-medium">{message}</p>
                 </div>
             )}
 
@@ -179,7 +179,7 @@ const GraphVisualizer: React.FC<GraphVisualizerProps> = ({
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {queue.length > 0 && (
                         <div className="bg-dark-elevated rounded-lg p-4 border border-dark-border">
-                            <h3 className="text-sm font-semibold text-gray-400 mb-3">QUEUE</h3>
+                            <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3">QUEUE</h3>
                             <div className="flex gap-2">
                                 {queue.map((nodeId, index) => (
                                     <div
@@ -195,7 +195,7 @@ const GraphVisualizer: React.FC<GraphVisualizerProps> = ({
 
                     {stack.length > 0 && (
                         <div className="bg-dark-elevated rounded-lg p-4 border border-dark-border">
-                            <h3 className="text-sm font-semibold text-gray-400 mb-3">STACK</h3>
+                            <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3">STACK</h3>
                             <div className="flex flex-col gap-2">
                                 {stack.slice().reverse().map((nodeId, index) => (
                                     <div
@@ -215,15 +215,15 @@ const GraphVisualizer: React.FC<GraphVisualizerProps> = ({
             <div className="flex flex-wrap gap-4 justify-center text-sm">
                 <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full bg-primary-600 border-2 border-primary-400"></div>
-                    <span className="text-gray-400">Current Node</span>
+                    <span className="text-gray-500 dark:text-gray-400">Current Node</span>
                 </div>
                 <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full bg-green-600 border-2 border-green-400"></div>
-                    <span className="text-gray-400">Visited</span>
+                    <span className="text-gray-500 dark:text-gray-400">Visited</span>
                 </div>
                 <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full bg-dark-surface border-2 border-dark-border"></div>
-                    <span className="text-gray-400">Unvisited</span>
+                    <span className="text-gray-500 dark:text-gray-400">Unvisited</span>
                 </div>
             </div>
         </div>

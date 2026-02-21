@@ -40,9 +40,9 @@ const PathVisualizer: React.FC<PathVisualizerProps> = ({
             {/* Message Display */}
             <div className="bg-dark-elevated border border-dark-border rounded-lg p-4">
                 <div className="flex justify-between items-center">
-                    <p className="text-gray-300 font-medium">{message || 'Traveling Salesperson Problem'}</p>
+                    <p className="text-gray-600 dark:text-gray-300 font-medium">{message || 'Traveling Salesperson Problem'}</p>
                     {totalDistance !== undefined && (
-                        <p className="text-primary-400 font-bold">
+                        <p className="text-primary-600 dark:text-primary-400 font-bold">
                             Total Distance: {totalDistance.toFixed(2)}
                         </p>
                     )}
@@ -151,7 +151,7 @@ const PathVisualizer: React.FC<PathVisualizerProps> = ({
             {/* Path Sequence */}
             {path.length > 0 && (
                 <div className="bg-dark-elevated border border-dark-border rounded-lg p-4">
-                    <p className="text-gray-400 text-sm mb-2">Path Sequence:</p>
+                    <p className="text-gray-500 dark:text-gray-400 text-sm mb-2">Path Sequence:</p>
                     <div className="flex items-center gap-2 flex-wrap">
                         {path.map((cityId, idx) => {
                             const city = cities.find(c => c.id === cityId);

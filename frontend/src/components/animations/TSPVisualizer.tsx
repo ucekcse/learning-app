@@ -114,32 +114,32 @@ const TSPVisualizer: React.FC<TSPVisualizerProps> = ({
     return (
         <div className="space-y-4">
             {message && (
-                <div className="bg-slate-950 border border-slate-700 rounded-lg p-3 text-center">
-                    <p className="text-gray-300 font-mono text-sm">{message}</p>
+                <div className="bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-700 rounded-lg p-3 text-center">
+                    <p className="text-gray-600 dark:text-gray-300 font-mono text-sm">{message}</p>
                 </div>
             )}
-            <div className="bg-slate-900 border border-slate-700 rounded-lg p-2 sm:p-4 overflow-x-auto scrollbar-thin">
+            <div className="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg p-2 sm:p-4 overflow-x-auto scrollbar-thin">
                 <div className="min-w-[600px] flex justify-center">
                     <canvas
                         ref={canvasRef}
                         width={600}
                         height={400}
-                        className="bg-slate-900 rounded cursor-pointer"
+                        className="bg-slate-100 dark:bg-slate-900 rounded cursor-pointer"
                     />
                 </div>
             </div>
             <div className="flex flex-wrap justify-center gap-3 sm:gap-6 text-xs sm:text-sm">
                 <div className="flex items-center gap-2">
                     <div className="w-4 h-1 bg-green-500"></div>
-                    <span className="text-gray-300">Best Path</span>
+                    <span className="text-gray-600 dark:text-gray-300">Best Path</span>
                 </div>
                 <div className="flex items-center gap-2">
                     <div className="w-4 h-1 bg-yellow-400"></div>
-                    <span className="text-gray-300">Evaluating Edge</span>
+                    <span className="text-gray-600 dark:text-gray-300">Evaluating Edge</span>
                 </div>
                 <div className="flex items-center gap-2">
                     <div className="w-4 h-1 border-b-2 border-dashed border-blue-500"></div>
-                    <span className="text-gray-300">Current Path</span>
+                    <span className="text-gray-600 dark:text-gray-300">Current Path</span>
                 </div>
             </div>
         </div>

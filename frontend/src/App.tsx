@@ -68,23 +68,23 @@ function App() {
 
           {/* Placeholder routes for remaining algorithms */}
           <Route path="/algorithm/*" element={
-            <div className="min-h-screen bg-slate-900 text-gray-100 flex items-center justify-center">
+            <div className="min-h-screen bg-slate-50 dark:bg-slate-900 text-gray-900 dark:text-gray-100 flex items-center justify-center">
               <div className="card max-w-2xl">
-                <h1 className="text-3xl font-bold text-gray-100 mb-4">Algorithm Page</h1>
-                <p className="text-gray-400 mb-4">
+                <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Algorithm Page</h1>
+                <p className="text-gray-500 dark:text-gray-400 mb-4">
                   This is a comprehensive algorithm learning platform with 25+ algorithms.
                 </p>
-                <p className="text-gray-300">
+                <p className="text-gray-600 dark:text-gray-300">
                   <strong>Currently Implemented Pages (10):</strong>
                 </p>
-                <ul className="list-disc list-inside text-gray-300 mt-2 space-y-1">
+                <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 mt-2 space-y-1">
                   <li>Linear Search, Binary Search, Pattern Matching</li>
                   <li>Insertion Sort, Heap Sort, Merge Sort, Quick Sort</li>
                   <li>BFS (Breadth First Search), DFS (Depth First Search)</li>
                   <li>N-Queens Problem (Backtracking)</li>
                   <li>FCFS, SJF (CPU Scheduling)</li>
                 </ul>
-                <p className="text-gray-400 mt-4">
+                <p className="text-gray-500 dark:text-gray-400 mt-4">
                   Each algorithm page includes: Definition, Pros/Cons, Working Steps, Interactive Animation,
                   Editable Inputs, Live Python Code Execution, and Examples.
                 </p>

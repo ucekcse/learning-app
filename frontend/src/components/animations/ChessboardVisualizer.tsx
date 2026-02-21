@@ -37,7 +37,7 @@ const ChessboardVisualizer: React.FC<ChessboardVisualizerProps> = ({
         <div className="space-y-4">
             {/* Message Display */}
             <div className="bg-dark-elevated border border-dark-border rounded-lg p-4">
-                <p className="text-gray-300 text-center font-medium">{message || `${size}-Queens Problem`}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-center font-medium">{message || `${size}-Queens Problem`}</p>
             </div>
 
             {/* Chessboard */}
@@ -88,7 +88,7 @@ const ChessboardVisualizer: React.FC<ChessboardVisualizerProps> = ({
                         </svg>
 
                         {/* Row and column labels */}
-                        <div className="flex justify-around mt-2 text-gray-400 text-sm font-mono">
+                        <div className="flex justify-around mt-2 text-gray-500 dark:text-gray-400 text-sm font-mono">
                             {Array.from({ length: size }).map((_, i) => (
                                 <div key={i} style={{ width: cellSize }} className="text-center">
                                     {i}
@@ -103,11 +103,11 @@ const ChessboardVisualizer: React.FC<ChessboardVisualizerProps> = ({
             <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm">
                 <div className="flex items-center gap-2">
                     <div className="w-3 h-3 sm:w-4 sm:h-4 bg-green-600 border border-gray-600"></div>
-                    <span className="text-gray-300">Valid Queen</span>
+                    <span className="text-gray-600 dark:text-gray-300">Valid Queen</span>
                 </div>
                 <div className="flex items-center gap-2">
                     <div className="w-3 h-3 sm:w-4 sm:h-4 bg-red-600 border border-gray-600"></div>
-                    <span className="text-gray-300">Conflict</span>
+                    <span className="text-gray-600 dark:text-gray-300">Conflict</span>
                 </div>
             </div>
 

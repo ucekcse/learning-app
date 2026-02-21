@@ -35,16 +35,16 @@ const Home: React.FC = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-dark-bg">
+        <div className="min-h-screen bg-slate-50 dark:bg-slate-900">
             {/* Hero Section */}
-            <div className="bg-dark-surface border-b border-dark-border">
+            <div className="bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
                 <div className="max-w-6xl mx-auto px-4 sm:px-8 py-12 sm:py-16">
                     <div className="text-center">
-                        <h1 className="text-4xl sm:text-5xl font-bold text-gray-100 mb-4 sm:mb-6 leading-tight">
+                        <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4 sm:mb-6 leading-tight">
                             Master Algorithms Through <br className="hidden sm:block" />
                             <span className="text-primary-500"> Interactive Learning</span>
                         </h1>
-                        <p className="text-lg sm:text-xl text-gray-400 mb-8 max-w-3xl mx-auto px-2">
+                        <p className="text-lg sm:text-xl text-gray-500 dark:text-gray-400 mb-8 max-w-3xl mx-auto px-2">
                             A comprehensive platform for computer science students to understand algorithms deeply through visualizations, live code execution, and hands-on experimentation.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -61,15 +61,15 @@ const Home: React.FC = () => {
 
             {/* Features Section */}
             <div className="max-w-6xl mx-auto px-4 sm:px-8 py-12 sm:py-16">
-                <h2 className="text-2xl sm:text-3xl font-bold text-gray-100 mb-8 sm:mb-12 text-center">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8 sm:mb-12 text-center">
                     Why Choose AlgoLearn?
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {features.map((feature, index) => (
                         <div key={index} className="card hover:border-primary-500 transition-all">
                             <div className="text-primary-500 mb-4">{feature.icon}</div>
-                            <h3 className="text-lg font-semibold text-gray-100 mb-2">{feature.title}</h3>
-                            <p className="text-gray-400 text-sm">{feature.description}</p>
+                            <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">{feature.title}</h3>
+                            <p className="text-gray-500 dark:text-gray-400 text-sm">{feature.description}</p>
                         </div>
                     ))}
                 </div>
@@ -77,7 +77,7 @@ const Home: React.FC = () => {
 
             {/* Categories Section */}
             <div id="categories" className="max-w-6xl mx-auto px-4 sm:px-8 py-12 sm:py-16">
-                <h2 className="text-2xl sm:text-3xl font-bold text-gray-100 mb-8 sm:mb-12 text-center">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8 sm:mb-12 text-center">
                     Algorithm Categories
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -93,20 +93,20 @@ const Home: React.FC = () => {
                                 </div>
                                 <span className="text-gray-400 group-hover:text-primary-500 transition-colors">→</span>
                             </div>
-                            <h3 className="text-xl font-semibold text-gray-100 mb-2">{category.name}</h3>
-                            <p className="text-gray-400 text-sm">{category.count} algorithms to master</p>
+                            <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">{category.name}</h3>
+                            <p className="text-gray-500 dark:text-gray-400 text-sm">{category.count} algorithms to master</p>
                         </Link>
                     ))}
                 </div>
             </div>
 
             {/* CTA Section */}
-            <div className="bg-dark-surface border-t border-dark-border">
+            <div className="bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700">
                 <div className="max-w-6xl mx-auto px-4 sm:px-8 py-12 sm:py-16 text-center">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-100 mb-4">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
                         Ready to Master Algorithms?
                     </h2>
-                    <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+                    <p className="text-gray-500 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
                         Start your journey with Linear Search and progress through 25+ algorithms with interactive visualizations and live code execution.
                     </p>
                     <Link to="/algorithm/linear-search" className="btn btn-primary text-lg px-8 py-3">

@@ -22,8 +22,8 @@ const MinMaxVisualizer: React.FC<MinMaxVisualizerProps> = ({
 }) => {
     return (
         <div className="space-y-6">
-            <div className="bg-slate-950 border border-slate-700 rounded-lg p-4 text-center">
-                <p className="text-gray-300 font-mono text-sm">{message}</p>
+            <div className="bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-700 rounded-lg p-4 text-center">
+                <p className="text-gray-600 dark:text-gray-300 font-mono text-sm">{message}</p>
                 <div className="flex flex-wrap justify-center gap-3 sm:gap-8 mt-2 text-xs text-gray-400">
                     <span>Range: [{low}, {high}]</span>
                     {min !== undefined && <span className="text-green-400">Current Min: {min}</span>}
@@ -31,7 +31,7 @@ const MinMaxVisualizer: React.FC<MinMaxVisualizerProps> = ({
                 </div>
             </div>
 
-            <div className="flex justify-center items-end gap-1 sm:gap-2 h-48 sm:h-64 bg-slate-900/50 p-2 sm:p-4 rounded-lg border border-slate-800 overflow-x-auto scrollbar-thin">
+            <div className="flex justify-center items-end gap-1 sm:gap-2 h-48 sm:h-64 bg-slate-100 dark:bg-slate-900/50 p-2 sm:p-4 rounded-lg border border-slate-200 dark:border-slate-800 overflow-x-auto scrollbar-thin">
                 {array.map((value, idx) => {
                     let bgColor = 'bg-slate-700'; // Default inactive
                     let borderColor = 'border-slate-600';
@@ -76,15 +76,15 @@ const MinMaxVisualizer: React.FC<MinMaxVisualizerProps> = ({
             <div className="flex flex-wrap justify-center gap-3 sm:gap-4 text-xs sm:text-sm">
                 <div className="flex items-center gap-2">
                     <div className="w-4 h-4 bg-indigo-500 rounded"></div>
-                    <span className="text-gray-400">Left Half</span>
+                    <span className="text-gray-500 dark:text-gray-400">Left Half</span>
                 </div>
                 <div className="flex items-center gap-2">
                     <div className="w-4 h-4 bg-violet-500 rounded"></div>
-                    <span className="text-gray-400">Right Half</span>
+                    <span className="text-gray-500 dark:text-gray-400">Right Half</span>
                 </div>
                 <div className="flex items-center gap-2">
                     <div className="w-4 h-4 bg-slate-700 rounded"></div>
-                    <span className="text-gray-400">Inactive</span>
+                    <span className="text-gray-500 dark:text-gray-400">Inactive</span>
                 </div>
             </div>
         </div>

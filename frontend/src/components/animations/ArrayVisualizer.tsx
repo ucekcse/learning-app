@@ -75,7 +75,7 @@ const ArrayVisualizer: React.FC<ArrayVisualizerProps> = ({
 
                 {onSpeedChange && (
                     <div className="flex items-center gap-3">
-                        <span className="text-sm text-gray-400">Speed:</span>
+                        <span className="text-sm text-gray-500 dark:text-gray-400">Speed:</span>
                         <input
                             type="range"
                             min="0.5"
@@ -85,15 +85,15 @@ const ArrayVisualizer: React.FC<ArrayVisualizerProps> = ({
                             onChange={(e) => onSpeedChange(parseFloat(e.target.value))}
                             className="w-32"
                         />
-                        <span className="text-sm text-gray-300 w-8">{speed}x</span>
+                        <span className="text-sm text-gray-700 dark:text-gray-300 w-8">{speed}x</span>
                     </div>
                 )}
             </div>
 
             {/* Message Display */}
             {message && (
-                <div className="bg-primary-900/30 border border-primary-500 rounded-lg p-3">
-                    <p className="text-primary-200 text-sm font-medium">{message}</p>
+                <div className="bg-primary-50 dark:bg-primary-900/30 border border-primary-300 dark:border-primary-500 rounded-lg p-3">
+                    <p className="text-primary-700 dark:text-primary-200 text-sm font-medium">{message}</p>
                 </div>
             )}
 
@@ -114,7 +114,7 @@ const ArrayVisualizer: React.FC<ArrayVisualizerProps> = ({
                                     <span className="text-white font-bold mb-2">{value}</span>
                                 </div>
                                 {/* Index */}
-                                <span className="text-xs text-gray-500 font-mono">i={index}</span>
+                                <span className="text-xs text-gray-400 dark:text-gray-500 font-mono">i={index}</span>
                             </div>
                         );
                     })}
@@ -124,20 +124,20 @@ const ArrayVisualizer: React.FC<ArrayVisualizerProps> = ({
             {/* Legend */}
             <div className="flex flex-wrap gap-4 justify-center text-sm">
                 <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 border-2 border-primary-500 bg-primary-900/30 rounded"></div>
-                    <span className="text-gray-400">Current</span>
+                    <div className="w-4 h-4 border-2 border-primary-500 bg-primary-100 dark:bg-primary-900/30 rounded"></div>
+                    <span className="text-gray-500 dark:text-gray-400">Current</span>
                 </div>
                 <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 border-2 border-yellow-500 bg-yellow-900/30 rounded"></div>
-                    <span className="text-gray-400">Comparing</span>
+                    <div className="w-4 h-4 border-2 border-yellow-500 bg-yellow-100 dark:bg-yellow-900/30 rounded"></div>
+                    <span className="text-gray-500 dark:text-gray-400">Comparing</span>
                 </div>
                 <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 border-2 border-red-500 bg-red-900/30 rounded"></div>
-                    <span className="text-gray-400">Swapping</span>
+                    <div className="w-4 h-4 border-2 border-red-500 bg-red-100 dark:bg-red-900/30 rounded"></div>
+                    <span className="text-gray-500 dark:text-gray-400">Swapping</span>
                 </div>
                 <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 border-2 border-green-500 bg-green-900/30 rounded"></div>
-                    <span className="text-gray-400">Sorted</span>
+                    <div className="w-4 h-4 border-2 border-green-500 bg-green-100 dark:bg-green-900/30 rounded"></div>
+                    <span className="text-gray-500 dark:text-gray-400">Sorted</span>
                 </div>
             </div>
         </div>

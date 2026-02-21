@@ -253,7 +253,7 @@ print(f"Sorted array: {sorted_arr}")`,
                 <div className="card">
                     <div className="flex items-center justify-between">
                         <div>
-                            <h1 className="text-4xl font-bold text-gray-100 mb-2">{algorithmData.title}</h1>
+                            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">{algorithmData.title}</h1>
                             <span className="algorithm-badge badge-sorting">{algorithmData.category}</span>
                         </div>
                     </div>
@@ -261,10 +261,10 @@ print(f"Sorted array: {sorted_arr}")`,
 
                 <div className="card">
                     <h2 className="section-title">What is Merge Sort?</h2>
-                    <p className="text-gray-300 leading-relaxed mb-4">{algorithmData.definition}</p>
-                    <div className="bg-blue-900/30 border border-blue-500 rounded-lg p-4">
-                        <h3 className="text-sm font-semibold text-blue-200 mb-2">Real-World Applications</h3>
-                        <p className="text-blue-100 text-sm">{algorithmData.realWorldUse}</p>
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">{algorithmData.definition}</p>
+                    <div className="bg-primary-50 dark:bg-primary-950/30 border border-primary-200 dark:border-primary-800 rounded-lg p-4">
+                        <h3 className="text-sm font-semibold text-primary-600 dark:text-primary-300 mb-2">Real-World Applications</h3>
+                        <p className="text-primary-600 dark:text-primary-300 text-sm">{algorithmData.realWorldUse}</p>
                     </div>
                 </div>
 
@@ -279,7 +279,7 @@ print(f"Sorted array: {sorted_arr}")`,
 
                 <div className="card">
                     <h2 className="section-title">Interactive Visualization</h2>
-                    <p className="text-gray-400 mb-6">
+                    <p className="text-gray-500 dark:text-gray-400 mb-6">
                         Watch how Merge Sort divides the array recursively and merges sorted subarrays.
                     </p>
                     <ArrayVisualizer

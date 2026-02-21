@@ -207,25 +207,25 @@ print(f"Target: {target}")`,
     };
 
     return (
-        <div className="min-h-screen bg-slate-900 text-slate-50 p-4 sm:p-8">
+        <div className="min-h-screen bg-surface-50 dark:bg-dark-950 text-gray-900 dark:text-white p-4 sm:p-8">
             <div className="max-w-7xl mx-auto space-y-6 sm:space-y-8">
                 {/* Header */}
-                <div className="bg-slate-800 rounded-lg p-4 sm:p-6 border border-slate-700">
+                <div className="bg-white dark:bg-dark-900 rounded-lg shadow-soft dark:shadow-none p-4 sm:p-6 border border-surface-200/70 dark:border-dark-800/80">
                     <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                         <div>
-                            <h1 className="text-3xl sm:text-4xl font-bold text-gray-100 mb-2">{algorithmData.title}</h1>
+                            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-2">{algorithmData.title}</h1>
                             <span className="algorithm-badge badge-searching">{algorithmData.category}</span>
                         </div>
                     </div>
                 </div>
 
                 {/* Definition */}
-                <div className="bg-slate-800 rounded-lg p-4 sm:p-6 border border-slate-700">
+                <div className="bg-white dark:bg-dark-900 rounded-lg shadow-soft dark:shadow-none p-4 sm:p-6 border border-surface-200/70 dark:border-dark-800/80">
                     <h2 className="section-title">What is Linear Search?</h2>
-                    <p className="text-gray-300 leading-relaxed mb-4">{algorithmData.definition}</p>
-                    <div className="bg-blue-900/30 border border-blue-500 rounded-lg p-4">
-                        <h3 className="text-sm font-semibold text-blue-200 mb-2">Real-World Applications</h3>
-                        <p className="text-blue-100 text-sm">{algorithmData.realWorldUse}</p>
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">{algorithmData.definition}</p>
+                    <div className="bg-primary-50 dark:bg-primary-950/30 border border-primary-200 dark:border-primary-800 rounded-lg p-4">
+                        <h3 className="text-sm font-semibold text-primary-600 dark:text-primary-300 mb-2">Real-World Applications</h3>
+                        <p className="text-primary-600 dark:text-primary-300 text-sm">{algorithmData.realWorldUse}</p>
                     </div>
                 </div>
 
@@ -241,9 +241,9 @@ print(f"Target: {target}")`,
                 <WorkingSection steps={algorithmData.workingSteps} />
 
                 {/* Animation */}
-                <div className="bg-slate-800 rounded-lg p-4 sm:p-6 border border-slate-700">
+                <div className="bg-white dark:bg-dark-900 rounded-lg shadow-soft dark:shadow-none p-4 sm:p-6 border border-surface-200/70 dark:border-dark-800/80">
                     <h2 className="section-title">Interactive Visualization</h2>
-                    <p className="text-gray-400 mb-6">
+                    <p className="text-gray-500 dark:text-gray-400 mb-6">
                         Watch how Linear Search examines each element sequentially until it finds the target value.
                     </p>
                     <ArrayVisualizer
