@@ -31,7 +31,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
             <main className="flex-1 overflow-y-auto overflow-x-hidden scrollbar-thin relative flex flex-col min-w-0">
                 {/* Mobile Header */}
-                <div className="md:hidden flex items-center justify-between p-4 bg-slate-100 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
+                <div className="md:hidden flex items-center justify-between p-4 bg-slate-100/95 dark:bg-slate-800/95 backdrop-blur-sm border-b border-slate-200 dark:border-slate-700 sticky top-0 z-30">
                     <button
                         onClick={() => setIsSidebarOpen(true)}
                         className="p-2 -ml-2 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg transition-colors"
