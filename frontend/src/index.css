@@ -82,11 +82,11 @@
   }
 
   .card {
-    @apply bg-white dark:bg-zinc-900/80 rounded-2xl p-5 sm:p-8 transition-colors overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none dark:ring-1 dark:ring-white/5;
+    @apply bg-white dark:bg-zinc-900/80 rounded-2xl p-5 sm:p-8 transition-colors overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-none dark:ring-1 dark:ring-white/5;
   }
 
   .glass-panel {
-    @apply bg-white/70 dark:bg-zinc-900/70 backdrop-blur-xl border border-white/20 dark:border-zinc-800/50 shadow-lg dark:shadow-none dark:ring-1 dark:ring-white/5;
+    @apply bg-white/90 dark:bg-zinc-900/70 backdrop-blur-xl border border-zinc-200 dark:border-zinc-800/50 shadow-lg dark:shadow-none dark:ring-1 dark:ring-white/5;
   }
 
   .input-field {
@@ -137,7 +137,7 @@
   }
 
   .bg-dark-elevated {
-    @apply bg-zinc-50 dark:bg-zinc-800/40 rounded-xl border border-zinc-100 dark:border-zinc-800;
+    @apply bg-zinc-100/70 dark:bg-zinc-800/40 rounded-xl border border-zinc-200 dark:border-zinc-800;
   }
 
   .border-dark-border {
