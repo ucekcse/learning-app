@@ -199,12 +199,12 @@ const NQueens: React.FC = () => {
     return (
         <div className="min-h-screen bg-surface-50 dark:bg-dark-950 text-gray-900 dark:text-white p-3 sm:p-8">
             <div className="max-w-7xl mx-auto space-y-8">
-                <div className="bg-slate-800 border-surface-200/70 dark:border-dark-800/80 rounded-lg p-6 border transition-colors">
+                <div className="bg-zinc-800 border-surface-200/70 dark:border-dark-800/80 rounded-lg p-6 border transition-colors">
                     <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">{algorithmData.title}</h1>
                     <span className="algorithm-badge badge-sorting">{algorithmData.category}</span>
                 </div>
 
-                <div className="bg-slate-800 border-surface-200/70 dark:border-dark-800/80 rounded-lg p-6 border transition-colors">
+                <div className="bg-zinc-800 border-surface-200/70 dark:border-dark-800/80 rounded-lg p-6 border transition-colors">
                     <h2 className="section-title">What is the N-Queens Problem?</h2>
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">{algorithmData.definition}</p>
                     <div className="bg-primary-50 dark:bg-primary-950/30 border border-primary-200 dark:border-primary-800 rounded-lg p-4">
@@ -222,7 +222,7 @@ const NQueens: React.FC = () => {
 
                 <WorkingSection steps={algorithmData.workingSteps} />
 
-                <div className="bg-slate-800 border-surface-200/70 dark:border-dark-800/80 rounded-lg p-6 border transition-colors">
+                <div className="bg-zinc-800 border-surface-200/70 dark:border-dark-800/80 rounded-lg p-6 border transition-colors">
                     <h2 className="section-title">Interactive Visualization</h2>
                     <p className="text-gray-500 dark:text-gray-400 mb-6">
                         Chessboard showing queen placements for the {inputs.n}-Queens problem.

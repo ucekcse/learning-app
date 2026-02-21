@@ -71,7 +71,7 @@ const GanttChart: React.FC<GanttChartProps> = ({
     return (
         <div className="space-y-4">
             {/* Controls */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-slate-100 dark:bg-slate-800 rounded-lg p-3 sm:p-4 border border-slate-200 dark:border-slate-600 gap-3">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-zinc-100 dark:bg-zinc-800 rounded-lg p-3 sm:p-4 border border-zinc-200 dark:border-zinc-600 gap-3">
                 <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto">
                     <button
                         onClick={onPlayPause}
@@ -112,10 +112,10 @@ const GanttChart: React.FC<GanttChartProps> = ({
             )}
 
             {/* Gantt Chart */}
-            <div className="bg-slate-100 dark:bg-slate-800 rounded-lg p-3 sm:p-6 border border-slate-200 dark:border-slate-600 overflow-x-auto scrollbar-thin">
+            <div className="bg-zinc-100 dark:bg-zinc-800 rounded-lg p-3 sm:p-6 border border-zinc-200 dark:border-zinc-600 overflow-x-auto scrollbar-thin">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50 mb-4">Gantt Chart</h3>
 
-                <div className="relative h-24 bg-slate-50 dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-600">
+                <div className="relative h-24 bg-zinc-50 dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-600">
                     {ganttBlocks.map((block, index) => {
                         const left = (block.startTime / maxTime) * 100;
                         const width = ((block.endTime - block.startTime) / maxTime) * 100;
@@ -123,7 +123,7 @@ const GanttChart: React.FC<GanttChartProps> = ({
                         return (
                             <div
                                 key={index}
-                                className={`absolute h-full ${getProcessColor(block.processId)} border-r-2 border-slate-200 dark:border-slate-900 flex items-center justify-center transition-all duration-300`}
+                                className={`absolute h-full ${getProcessColor(block.processId)} border-r-2 border-zinc-200 dark:border-zinc-900 flex items-center justify-center transition-all duration-300`}
                                 style={{ left: `${left}%`, width: `${width}%` }}
                             >
                                 <span className="text-white font-bold text-sm">{block.processName}</span>
@@ -137,7 +137,7 @@ const GanttChart: React.FC<GanttChartProps> = ({
                             className="absolute top-0 h-full w-1 bg-red-500 z-10 transition-all duration-300"
                             style={{ left: `${(currentTime / maxTime) * 100}%` }}
                         >
-                            <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-red-500 text-white text-xs px-2 py-1 rounded">
+                            <div className="absolute -top-6 left-1/2 transform -tranzinc-x-1/2 bg-red-500 text-white text-xs px-2 py-1 rounded">
                                 {currentTime}
                             </div>
                         </div>
@@ -159,11 +159,11 @@ const GanttChart: React.FC<GanttChartProps> = ({
             </div>
 
             {/* Process Table */}
-            <div className="bg-slate-100 dark:bg-slate-800 rounded-lg p-3 sm:p-6 border border-slate-200 dark:border-slate-600 overflow-x-auto scrollbar-thin">
+            <div className="bg-zinc-100 dark:bg-zinc-800 rounded-lg p-3 sm:p-6 border border-zinc-200 dark:border-zinc-600 overflow-x-auto scrollbar-thin">
                 <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-50 mb-4">Process Details</h3>
                 <table className="w-full text-xs sm:text-sm">
                     <thead>
-                        <tr className="border-b border-slate-200 dark:border-slate-600">
+                        <tr className="border-b border-zinc-200 dark:border-zinc-600">
                             <th className="text-left py-2 px-4 text-gray-600 dark:text-gray-400">Process</th>
                             <th className="text-left py-2 px-4 text-gray-600 dark:text-gray-400">Arrival Time</th>
                             <th className="text-left py-2 px-4 text-gray-600 dark:text-gray-400">Burst Time</th>
@@ -176,7 +176,7 @@ const GanttChart: React.FC<GanttChartProps> = ({
                     </thead>
                     <tbody>
                         {processes && processes.map((process) => (
-                            <tr key={process.id} className="border-b border-slate-200/50 dark:border-slate-600/50">
+                            <tr key={process.id} className="border-b border-zinc-200/50 dark:border-zinc-600/50">
                                 <td className="py-2 px-4">
                                     <div className="flex items-center gap-2">
                                         <div className={`w-3 h-3 rounded ${getProcessColor(process.id)}`}></div>
@@ -201,11 +201,11 @@ const GanttChart: React.FC<GanttChartProps> = ({
 
                 {/* Averages */}
                 <div className="mt-4 grid grid-cols-2 gap-4">
-                    <div className="bg-slate-50 dark:bg-slate-900 rounded-lg p-3 border border-slate-200 dark:border-slate-600">
+                    <div className="bg-zinc-50 dark:bg-zinc-900 rounded-lg p-3 border border-zinc-200 dark:border-zinc-600">
                         <span className="text-sm text-gray-600 dark:text-gray-400">Average Waiting Time</span>
                         <p className="text-2xl font-bold text-primary-600 dark:text-primary-400">{avgWaitingTime}</p>
                     </div>
-                    <div className="bg-slate-50 dark:bg-slate-900 rounded-lg p-3 border border-slate-200 dark:border-slate-600">
+                    <div className="bg-zinc-50 dark:bg-zinc-900 rounded-lg p-3 border border-zinc-200 dark:border-zinc-600">
                         <span className="text-sm text-gray-600 dark:text-gray-400">Average Turnaround Time</span>
                         <p className="text-2xl font-bold text-green-600 dark:text-green-400">{avgTurnaroundTime}</p>
                     </div>

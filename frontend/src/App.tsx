@@ -68,7 +68,7 @@ function App() {
 
           {/* Placeholder routes for remaining algorithms */}
           <Route path="/algorithm/*" element={
-            <div className="min-h-screen bg-slate-50 dark:bg-slate-900 text-gray-900 dark:text-gray-100 flex items-center justify-center">
+            <div className="min-h-screen bg-zinc-50 dark:bg-zinc-900 text-gray-900 dark:text-gray-100 flex items-center justify-center">
               <div className="card max-w-2xl">
                 <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Algorithm Page</h1>
                 <p className="text-gray-500 dark:text-gray-400 mb-4">

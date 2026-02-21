@@ -250,7 +250,7 @@ sjf_scheduling(processes)`,
                     <p className="text-gray-600 dark:text-gray-400 mb-6">
                         Process execution timeline showing SJF scheduling order.
                     </p>
-                    <div className="bg-slate-100 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg p-4 sm:p-8">
+                    <div className="bg-zinc-100 dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg p-4 sm:p-8">
                         <p className="text-gray-700 dark:text-gray-200 text-center">
                             SJF selects the process with shortest burst time, minimizing average waiting time.
                         </p>

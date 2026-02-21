@@ -44,7 +44,7 @@ const WorkingSection: React.FC<WorkingSectionProps> = ({ steps }) => {
                                 )}
 
                                 {step.codeSnippet && (
-                                    <pre className="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg p-3 sm:p-4 overflow-x-auto scrollbar-thin">
+                                    <pre className="bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-lg p-3 sm:p-4 overflow-x-auto scrollbar-thin">
                                         <code className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap break-all sm:break-normal sm:whitespace-pre">{step.codeSnippet}</code>
                                     </pre>
                                 )}

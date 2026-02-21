@@ -27,7 +27,7 @@ const TSPVisualizer: React.FC<TSPVisualizerProps> = ({
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         // Draw edges connecting all cities (background web)
-        ctx.strokeStyle = '#334155'; // slate-700
+        ctx.strokeStyle = '#334155'; // zinc-700
         ctx.lineWidth = 1;
         for (let i = 0; i < cities.length; i++) {
             for (let j = i + 1; j < cities.length; j++) {
@@ -93,11 +93,11 @@ const TSPVisualizer: React.FC<TSPVisualizerProps> = ({
             // Circle
             ctx.beginPath();
             ctx.arc(city.x, city.y, 10, 0, 2 * Math.PI);
-            ctx.fillStyle = '#64748b'; // slate-500
+            ctx.fillStyle = '#64748b'; // zinc-500
             if (path.includes(city.id)) ctx.fillStyle = '#3b82f6'; // blue-500
             if (bestPath.includes(city.id)) ctx.fillStyle = '#22c55e'; // green-500
             ctx.fill();
-            ctx.strokeStyle = '#0f172a'; // slate-900 border
+            ctx.strokeStyle = '#0f172a'; // zinc-900 border
             ctx.lineWidth = 2;
             ctx.stroke();
 
@@ -114,17 +114,17 @@ const TSPVisualizer: React.FC<TSPVisualizerProps> = ({
     return (
         <div className="space-y-4">
             {message && (
-                <div className="bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-700 rounded-lg p-3 text-center">
+                <div className="bg-zinc-100 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-700 rounded-lg p-3 text-center">
                     <p className="text-gray-600 dark:text-gray-300 font-mono text-sm">{message}</p>
                 </div>
             )}
-            <div className="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg p-2 sm:p-4 overflow-x-auto scrollbar-thin">
+            <div className="bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-lg p-2 sm:p-4 overflow-x-auto scrollbar-thin">
                 <div className="min-w-[600px] flex justify-center">
                     <canvas
                         ref={canvasRef}
                         width={600}
                         height={400}
-                        className="bg-slate-100 dark:bg-slate-900 rounded cursor-pointer"
+                        className="bg-zinc-100 dark:bg-zinc-900 rounded cursor-pointer"
                     />
                 </div>
             </div>

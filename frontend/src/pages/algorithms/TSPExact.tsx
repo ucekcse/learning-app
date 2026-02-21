@@ -185,12 +185,12 @@ print(f"Minimum Cost: {tsp_exact(dist)}")`,
     return (
         <div className="min-h-screen bg-surface-50 dark:bg-dark-950 text-gray-900 dark:text-white p-3 sm:p-8">
             <div className="max-w-7xl mx-auto space-y-8">
-                <div className="card bg-slate-800 border-surface-200/70 dark:border-dark-800/80">
+                <div className="card bg-zinc-800 border-surface-200/70 dark:border-dark-800/80">
                     <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">{algorithmData.title}</h1>
                     <span className="algorithm-badge badge-advanced">{algorithmData.category}</span>
                 </div>
 
-                <div className="card bg-slate-800 border-surface-200/70 dark:border-dark-800/80">
+                <div className="card bg-zinc-800 border-surface-200/70 dark:border-dark-800/80">
                     <h2 className="section-title">Overview</h2>
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">{algorithmData.definition}</p>
                     <div className="bg-primary-50 dark:bg-primary-950/30 border border-primary-200 dark:border-primary-800 rounded-lg p-4">
@@ -208,7 +208,7 @@ print(f"Minimum Cost: {tsp_exact(dist)}")`,
 
                 <WorkingSection steps={algorithmData.workingSteps} />
 
-                <div className="card bg-slate-800 border-surface-200/70 dark:border-dark-800/80">
+                <div className="card bg-zinc-800 border-surface-200/70 dark:border-dark-800/80">
                     <h2 className="section-title">Interactive Visualization</h2>
                     <p className="text-gray-500 dark:text-gray-400 mb-4">Brute force visualization for small N (checks all permutations).</p>
 
@@ -221,7 +221,7 @@ print(f"Minimum Cost: {tsp_exact(dist)}")`,
                         </button>
                     </div>
 
-                    <div className="bg-slate-950 p-4 rounded border border-surface-200/70 dark:border-dark-800/80">
+                    <div className="bg-zinc-950 p-4 rounded border border-surface-200/70 dark:border-dark-800/80">
                         {/* Visualizer Component Here */}
                         <div style={{ minHeight: '400px' }}>
                             <TSPVisualizer

@@ -88,7 +88,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
 
                 {/* Language Toggle */}
                 {(cCode && pythonCode) && (
-                    <div className="bg-slate-100 dark:bg-slate-800 p-1 rounded-lg flex items-center">
+                    <div className="bg-zinc-100 dark:bg-zinc-800 p-1 rounded-lg flex items-center">
                         <button
                             onClick={() => setActiveLanguage('c')}
                             className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${activeLanguage === 'c'
@@ -137,7 +137,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
                     <textarea
                         value={code}
                         onChange={(e) => handleCodeChange(e.target.value)}
-                        className={`w-full h-64 sm:h-96 bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-lg p-3 sm:p-4 font-mono text-xs sm:text-sm text-gray-900 dark:text-gray-50 focus:outline-none focus:border-primary-500 resize-none scrollbar-thin placeholder-gray-400 dark:placeholder-gray-500 ${activeLanguage !== 'python' ? 'opacity-90' : ''
+                        className={`w-full h-64 sm:h-96 bg-zinc-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-700 rounded-lg p-3 sm:p-4 font-mono text-xs sm:text-sm text-gray-900 dark:text-gray-50 focus:outline-none focus:border-primary-500 resize-none scrollbar-thin placeholder-gray-400 dark:placeholder-gray-500 ${activeLanguage !== 'python' ? 'opacity-90' : ''
                             }`}
                         spellCheck={false}
                         readOnly={activeLanguage !== 'python'}
@@ -153,7 +153,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
                 <div>
                     <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase mb-2">Output</h3>
                     <div
-                        className={`w-full h-64 sm:h-96 bg-slate-50 dark:bg-slate-950 border rounded-lg p-3 sm:p-4 font-mono text-xs sm:text-sm overflow-y-auto overflow-x-auto scrollbar-thin ${hasError ? 'border-red-500 text-red-500 dark:text-red-400' : 'border-slate-300 dark:border-slate-700 text-green-600 dark:text-green-400'
+                        className={`w-full h-64 sm:h-96 bg-zinc-50 dark:bg-zinc-950 border rounded-lg p-3 sm:p-4 font-mono text-xs sm:text-sm overflow-y-auto overflow-x-auto scrollbar-thin ${hasError ? 'border-red-500 text-red-500 dark:text-red-400' : 'border-zinc-300 dark:border-zinc-700 text-green-600 dark:text-green-400'
                             }`}
                     >
                         {output ? (

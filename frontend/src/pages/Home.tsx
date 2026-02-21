@@ -35,9 +35,9 @@ const Home: React.FC = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-slate-50 dark:bg-slate-900">
+        <div className="min-h-screen bg-zinc-50 dark:bg-zinc-900">
             {/* Hero Section */}
-            <div className="bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
+            <div className="bg-white dark:bg-zinc-800 border-b border-zinc-200 dark:border-zinc-700">
                 <div className="max-w-6xl mx-auto px-4 sm:px-8 py-12 sm:py-16">
                     <div className="text-center">
                         <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4 sm:mb-6 leading-tight">
@@ -101,7 +101,7 @@ const Home: React.FC = () => {
             </div>
 
             {/* CTA Section */}
-            <div className="bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700">
+            <div className="bg-white dark:bg-zinc-800 border-t border-zinc-200 dark:border-zinc-700">
                 <div className="max-w-6xl mx-auto px-4 sm:px-8 py-12 sm:py-16 text-center">
                     <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
                         Ready to Master Algorithms?
