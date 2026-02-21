@@ -13,10 +13,10 @@ const ProsConsSection: React.FC<ProsConsProps> = ({ pros, cons, timeComplexity, 
         <div className="card">
             <h2 className="section-title">Pros & Cons</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
                 {/* Pros */}
                 <div>
-                    <h3 className="text-lg font-semibold text-green-400 mb-4 flex items-center gap-2">
+                    <h3 className="text-base sm:text-lg font-semibold text-green-400 mb-3 sm:mb-4 flex items-center gap-2">
                         <CheckCircle className="w-5 h-5" />
                         Advantages
                     </h3>
@@ -24,7 +24,7 @@ const ProsConsSection: React.FC<ProsConsProps> = ({ pros, cons, timeComplexity, 
                         {pros.map((pro, index) => (
                             <li key={index} className="flex items-start gap-2 text-gray-300">
                                 <span className="text-green-500 mt-1">✓</span>
-                                <span>{pro}</span>
+                                <span className="text-sm sm:text-base break-words">{pro}</span>
                             </li>
                         ))}
                     </ul>
@@ -32,7 +32,7 @@ const ProsConsSection: React.FC<ProsConsProps> = ({ pros, cons, timeComplexity, 
 
                 {/* Cons */}
                 <div>
-                    <h3 className="text-lg font-semibold text-red-400 mb-4 flex items-center gap-2">
+                    <h3 className="text-base sm:text-lg font-semibold text-red-400 mb-3 sm:mb-4 flex items-center gap-2">
                         <XCircle className="w-5 h-5" />
                         Limitations
                     </h3>
@@ -40,7 +40,7 @@ const ProsConsSection: React.FC<ProsConsProps> = ({ pros, cons, timeComplexity, 
                         {cons.map((con, index) => (
                             <li key={index} className="flex items-start gap-2 text-gray-300">
                                 <span className="text-red-500 mt-1">✗</span>
-                                <span>{con}</span>
+                                <span className="text-sm sm:text-base break-words">{con}</span>
                             </li>
                         ))}
                     </ul>
@@ -48,16 +48,16 @@ const ProsConsSection: React.FC<ProsConsProps> = ({ pros, cons, timeComplexity, 
             </div>
 
             {/* Complexity */}
-            <div className="bg-dark-elevated rounded-lg p-4 border border-dark-border">
-                <h3 className="text-lg font-semibold text-gray-100 mb-3">Complexity Analysis</h3>
+            <div className="bg-dark-elevated rounded-lg p-3 sm:p-4 border border-dark-border">
+                <h3 className="text-base sm:text-lg font-semibold text-gray-100 mb-3">Complexity Analysis</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                        <span className="text-gray-400 text-sm">Time Complexity:</span>
-                        <p className="text-primary-400 font-mono text-lg font-semibold">{timeComplexity}</p>
+                        <span className="text-gray-400 text-xs sm:text-sm">Time Complexity:</span>
+                        <p className="text-primary-400 font-mono text-base sm:text-lg font-semibold break-all">{timeComplexity}</p>
                     </div>
                     <div>
-                        <span className="text-gray-400 text-sm">Space Complexity:</span>
-                        <p className="text-primary-400 font-mono text-lg font-semibold">{spaceComplexity}</p>
+                        <span className="text-gray-400 text-xs sm:text-sm">Space Complexity:</span>
+                        <p className="text-primary-400 font-mono text-base sm:text-lg font-semibold break-all">{spaceComplexity}</p>
                     </div>
                 </div>
             </div>

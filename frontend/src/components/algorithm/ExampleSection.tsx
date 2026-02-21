@@ -84,30 +84,34 @@ const ExampleSection: React.FC<ExampleSectionProps> = ({ examples }) => {
 
             <div className="space-y-6">
                 {examples.map((example, index) => (
-                    <div key={index} className="bg-dark-elevated rounded-lg p-6 border border-dark-border">
-                        <div className="flex items-center gap-2 mb-4">
-                            <FileText className="w-5 h-5 text-primary-500" />
-                            <h3 className="text-lg font-semibold text-gray-100">{example.title}</h3>
+                    <div key={index} className="bg-dark-elevated rounded-lg p-3 sm:p-6 border border-dark-border">
+                        <div className="flex items-center gap-2 mb-3 sm:mb-4">
+                            <FileText className="w-4 h-4 sm:w-5 sm:h-5 text-primary-500 shrink-0" />
+                            <h3 className="text-base sm:text-lg font-semibold text-gray-100 truncate">{example.title}</h3>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mb-3 sm:mb-4">
                             <div>
-                                <span className="text-sm font-semibold text-blue-400 uppercase block mb-2">📥 Input</span>
-                                <div className="bg-dark-bg border border-dark-border rounded-lg p-4">
-                                    {formatValue(example.input)}
+                                <span className="text-xs sm:text-sm font-semibold text-blue-400 uppercase block mb-2">📥 Input</span>
+                                <div className="bg-dark-bg border border-dark-border rounded-lg p-3 sm:p-4 overflow-x-auto scrollbar-thin">
+                                    <div className="text-xs sm:text-sm break-words">
+                                        {formatValue(example.input)}
+                                    </div>
                                 </div>
                             </div>
                             <div>
-                                <span className="text-sm font-semibold text-green-400 uppercase block mb-2">📤 Output</span>
-                                <div className="bg-dark-bg border border-dark-border rounded-lg p-4">
-                                    {formatValue(example.output)}
+                                <span className="text-xs sm:text-sm font-semibold text-green-400 uppercase block mb-2">📤 Output</span>
+                                <div className="bg-dark-bg border border-dark-border rounded-lg p-3 sm:p-4 overflow-x-auto scrollbar-thin">
+                                    <div className="text-xs sm:text-sm break-words">
+                                        {formatValue(example.output)}
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="bg-blue-900/20 rounded-lg p-4 border border-blue-500/30">
-                            <span className="text-sm font-semibold text-blue-300 uppercase block mb-2">💡 Explanation</span>
-                            <p className="text-gray-300 leading-relaxed">{example.explanation}</p>
+                        <div className="bg-blue-900/20 rounded-lg p-3 sm:p-4 border border-blue-500/30">
+                            <span className="text-xs sm:text-sm font-semibold text-blue-300 uppercase block mb-2">💡 Explanation</span>
+                            <p className="text-gray-300 leading-relaxed text-sm sm:text-base break-words">{example.explanation}</p>
                         </div>
                     </div>
                 ))}

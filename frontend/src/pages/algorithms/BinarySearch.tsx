@@ -231,7 +231,7 @@ print(f"Target: {target}")`,
     };
 
     return (
-        <div className="min-h-screen bg-dark-bg p-8">
+        <div className="min-h-screen bg-dark-bg p-3 sm:p-8">
             <div className="max-w-7xl mx-auto space-y-8">
                 {/* Header */}
                 <div className="card">

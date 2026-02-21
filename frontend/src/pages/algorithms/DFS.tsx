@@ -116,7 +116,7 @@ print(" -> ".join(traversal))`,
     };
 
     return (
-        <div className="min-h-screen bg-dark-bg p-8">
+        <div className="min-h-screen bg-dark-bg p-3 sm:p-8">
             <div className="max-w-7xl mx-auto space-y-8">
                 <div className="card">
                     <h1 className="text-4xl font-bold text-gray-100 mb-2">{algorithmData.title}</h1>
@@ -146,7 +146,7 @@ print(" -> ".join(traversal))`,
                     <p className="text-gray-400 mb-6">
                         Graph visualization showing DFS traversal order (Please use existing GraphVisualizer component).
                     </p>
-                    <div className="bg-dark-elevated border border-dark-border rounded-lg p-8 text-center">
+                    <div className="bg-dark-elevated border border-dark-border rounded-lg p-4 sm:p-8 text-center">
                         <p className="text-gray-400">
                             DFS explores deep into each branch before backtracking. Watch the traversal order in the animation below.
                         </p>

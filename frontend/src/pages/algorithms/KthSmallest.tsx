@@ -188,7 +188,7 @@ print(f"The {k}-th smallest element is {kth_smallest(arr, 0, len(arr) - 1, k)}")
     };
 
     return (
-        <div className="min-h-screen bg-slate-900 text-slate-50 p-8">
+        <div className="min-h-screen bg-slate-900 text-slate-50 p-3 sm:p-8">
             <div className="max-w-7xl mx-auto space-y-8">
                 <div className="card bg-slate-800 border-slate-700">
                     <h1 className="text-4xl font-bold text-gray-100 mb-2">{algorithmData.title}</h1>

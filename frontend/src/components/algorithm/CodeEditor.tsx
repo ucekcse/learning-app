@@ -137,7 +137,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
                     <textarea
                         value={code}
                         onChange={(e) => handleCodeChange(e.target.value)}
-                        className={`w-full h-96 bg-slate-950 border border-slate-700 rounded-lg p-4 font-mono text-sm text-gray-50 focus:outline-none focus:border-primary-500 resize-none scrollbar-thin placeholder-gray-500 ${activeLanguage !== 'python' ? 'opacity-90' : ''
+                        className={`w-full h-64 sm:h-96 bg-slate-950 border border-slate-700 rounded-lg p-3 sm:p-4 font-mono text-xs sm:text-sm text-gray-50 focus:outline-none focus:border-primary-500 resize-none scrollbar-thin placeholder-gray-500 ${activeLanguage !== 'python' ? 'opacity-90' : ''
                             }`}
                         spellCheck={false}
                         readOnly={activeLanguage !== 'python'}
@@ -153,7 +153,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
                 <div>
                     <h3 className="text-sm font-semibold text-gray-400 uppercase mb-2">Output</h3>
                     <div
-                        className={`w-full h-96 bg-slate-950 border rounded-lg p-4 font-mono text-sm overflow-y-auto scrollbar-thin ${hasError ? 'border-red-500 text-red-400' : 'border-slate-700 text-green-400'
+                        className={`w-full h-64 sm:h-96 bg-slate-950 border rounded-lg p-3 sm:p-4 font-mono text-xs sm:text-sm overflow-y-auto overflow-x-auto scrollbar-thin ${hasError ? 'border-red-500 text-red-400' : 'border-slate-700 text-green-400'
                             }`}
                     >
                         {output ? (

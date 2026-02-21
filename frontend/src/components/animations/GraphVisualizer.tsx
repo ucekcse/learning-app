@@ -90,86 +90,88 @@ const GraphVisualizer: React.FC<GraphVisualizerProps> = ({
             )}
 
             {/* Graph Visualization */}
-            <div className="bg-dark-elevated rounded-lg p-6 border border-dark-border">
-                <svg width={svgWidth} height={svgHeight} className="mx-auto">
-                    {/* Edges */}
-                    {edges.map((edge, index) => {
-                        const fromNode = nodes.find(n => n.id === edge.from);
-                        const toNode = nodes.find(n => n.id === edge.to);
-                        if (!fromNode || !toNode) return null;
+            <div className="bg-dark-elevated rounded-lg p-2 sm:p-6 border border-dark-border overflow-x-auto scrollbar-thin">
+                <div className="min-w-max flex justify-center py-4">
+                    <svg width={svgWidth} height={svgHeight} className="mx-auto block">
+                        {/* Edges */}
+                        {edges.map((edge, index) => {
+                            const fromNode = nodes.find(n => n.id === edge.from);
+                            const toNode = nodes.find(n => n.id === edge.to);
+                            if (!fromNode || !toNode) return null;
 
-                        const isActive = isEdgeActive(edge.from, edge.to);
+                            const isActive = isEdgeActive(edge.from, edge.to);
 
-                        return (
-                            <g key={index}>
-                                <line
-                                    x1={fromNode.x}
-                                    y1={fromNode.y}
-                                    x2={toNode.x}
-                                    y2={toNode.y}
-                                    stroke={isActive ? '#3b82f6' : '#475569'}
-                                    strokeWidth={isActive ? 3 : 2}
-                                    className="transition-all duration-300"
-                                />
-                                {edge.weight !== undefined && (
+                            return (
+                                <g key={index}>
+                                    <line
+                                        x1={fromNode.x}
+                                        y1={fromNode.y}
+                                        x2={toNode.x}
+                                        y2={toNode.y}
+                                        stroke={isActive ? '#3b82f6' : '#475569'}
+                                        strokeWidth={isActive ? 3 : 2}
+                                        className="transition-all duration-300"
+                                    />
+                                    {edge.weight !== undefined && (
+                                        <text
+                                            x={(fromNode.x + toNode.x) / 2}
+                                            y={(fromNode.y + toNode.y) / 2 - 10}
+                                            fill="#94a3b8"
+                                            fontSize="12"
+                                            textAnchor="middle"
+                                        >
+                                            {edge.weight}
+                                        </text>
+                                    )}
+                                </g>
+                            );
+                        })}
+
+                        {/* Nodes */}
+                        {nodes.map((node) => {
+                            const isVisited = visitedNodes.includes(node.id);
+                            const isCurrent = currentNode === node.id;
+
+                            let fillColor = '#1e293b';
+                            let strokeColor = '#475569';
+                            let strokeWidth = 2;
+
+                            if (isCurrent) {
+                                fillColor = '#3b82f6';
+                                strokeColor = '#60a5fa';
+                                strokeWidth = 4;
+                            } else if (isVisited) {
+                                fillColor = '#10b981';
+                                strokeColor = '#34d399';
+                                strokeWidth = 3;
+                            }
+
+                            return (
+                                <g key={node.id}>
+                                    <circle
+                                        cx={node.x}
+                                        cy={node.y}
+                                        r={25}
+                                        fill={fillColor}
+                                        stroke={strokeColor}
+                                        strokeWidth={strokeWidth}
+                                        className="transition-all duration-300"
+                                    />
                                     <text
-                                        x={(fromNode.x + toNode.x) / 2}
-                                        y={(fromNode.y + toNode.y) / 2 - 10}
-                                        fill="#94a3b8"
-                                        fontSize="12"
+                                        x={node.x}
+                                        y={node.y + 5}
+                                        fill="white"
+                                        fontSize="16"
+                                        fontWeight="bold"
                                         textAnchor="middle"
                                     >
-                                        {edge.weight}
+                                        {node.label}
                                     </text>
-                                )}
-                            </g>
-                        );
-                    })}
-
-                    {/* Nodes */}
-                    {nodes.map((node) => {
-                        const isVisited = visitedNodes.includes(node.id);
-                        const isCurrent = currentNode === node.id;
-
-                        let fillColor = '#1e293b';
-                        let strokeColor = '#475569';
-                        let strokeWidth = 2;
-
-                        if (isCurrent) {
-                            fillColor = '#3b82f6';
-                            strokeColor = '#60a5fa';
-                            strokeWidth = 4;
-                        } else if (isVisited) {
-                            fillColor = '#10b981';
-                            strokeColor = '#34d399';
-                            strokeWidth = 3;
-                        }
-
-                        return (
-                            <g key={node.id}>
-                                <circle
-                                    cx={node.x}
-                                    cy={node.y}
-                                    r={25}
-                                    fill={fillColor}
-                                    stroke={strokeColor}
-                                    strokeWidth={strokeWidth}
-                                    className="transition-all duration-300"
-                                />
-                                <text
-                                    x={node.x}
-                                    y={node.y + 5}
-                                    fill="white"
-                                    fontSize="16"
-                                    fontWeight="bold"
-                                    textAnchor="middle"
-                                >
-                                    {node.label}
-                                </text>
-                            </g>
-                        );
-                    })}
-                </svg>
+                                </g>
+                            );
+                        })}
+                    </svg>
+                </div>
             </div>
 
             {/* Data Structures Display */}

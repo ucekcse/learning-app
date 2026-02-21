@@ -71,11 +71,11 @@ const GanttChart: React.FC<GanttChartProps> = ({
     return (
         <div className="space-y-4">
             {/* Controls */}
-            <div className="flex items-center justify-between bg-slate-100 dark:bg-slate-800 rounded-lg p-4 border border-slate-200 dark:border-slate-600">
-                <div className="flex items-center gap-2">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-slate-100 dark:bg-slate-800 rounded-lg p-3 sm:p-4 border border-slate-200 dark:border-slate-600 gap-3">
+                <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto">
                     <button
                         onClick={onPlayPause}
-                        className="btn btn-primary flex items-center gap-2"
+                        className="btn btn-primary flex items-center gap-2 text-sm flex-1 sm:flex-none justify-center"
                         disabled={!onPlayPause}
                     >
                         {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
@@ -83,7 +83,7 @@ const GanttChart: React.FC<GanttChartProps> = ({
                     </button>
                     <button
                         onClick={onStep}
-                        className="btn btn-secondary flex items-center gap-2"
+                        className="btn btn-secondary flex items-center gap-2 text-sm flex-1 sm:flex-none justify-center"
                         disabled={!onStep || isPlaying}
                     >
                         <SkipForward className="w-4 h-4" />
@@ -91,7 +91,7 @@ const GanttChart: React.FC<GanttChartProps> = ({
                     </button>
                     <button
                         onClick={onReset}
-                        className="btn btn-secondary flex items-center gap-2"
+                        className="btn btn-secondary flex items-center gap-2 text-sm flex-1 sm:flex-none justify-center"
                         disabled={!onReset}
                     >
                         <RotateCcw className="w-4 h-4" />
@@ -112,7 +112,7 @@ const GanttChart: React.FC<GanttChartProps> = ({
             )}
 
             {/* Gantt Chart */}
-            <div className="bg-slate-100 dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-600 overflow-x-auto">
+            <div className="bg-slate-100 dark:bg-slate-800 rounded-lg p-3 sm:p-6 border border-slate-200 dark:border-slate-600 overflow-x-auto scrollbar-thin">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50 mb-4">Gantt Chart</h3>
 
                 <div className="relative h-24 bg-slate-50 dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-600">
@@ -159,9 +159,9 @@ const GanttChart: React.FC<GanttChartProps> = ({
             </div>
 
             {/* Process Table */}
-            <div className="bg-slate-100 dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-600 overflow-x-auto">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50 mb-4">Process Details</h3>
-                <table className="w-full text-sm">
+            <div className="bg-slate-100 dark:bg-slate-800 rounded-lg p-3 sm:p-6 border border-slate-200 dark:border-slate-600 overflow-x-auto scrollbar-thin">
+                <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-50 mb-4">Process Details</h3>
+                <table className="w-full text-xs sm:text-sm">
                     <thead>
                         <tr className="border-b border-slate-200 dark:border-slate-600">
                             <th className="text-left py-2 px-4 text-gray-600 dark:text-gray-400">Process</th>

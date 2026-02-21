@@ -236,7 +236,7 @@ print(f"\\nTraversal order: {' -> '.join(result)}")`,
     }, [isPlaying, currentStepIndex, steps]);
 
     return (
-        <div className="min-h-screen bg-dark-bg p-8">
+        <div className="min-h-screen bg-dark-bg p-3 sm:p-8">
             <div className="max-w-7xl mx-auto space-y-8">
                 <div className="card">
                     <div className="flex items-center justify-between">

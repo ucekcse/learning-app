@@ -50,100 +50,102 @@ const PathVisualizer: React.FC<PathVisualizerProps> = ({
             </div>
 
             {/* Path Canvas */}
-            <div className="bg-dark-surface border border-dark-border rounded-lg p-6">
-                <svg width="700" height="500" className="mx-auto">
-                    {/* Draw path edges */}
-                    {path.length > 1 && path.map((cityId, idx) => {
-                        if (idx === path.length - 1) return null;
+            <div className="bg-dark-surface border border-dark-border rounded-lg p-2 sm:p-6 overflow-x-auto scrollbar-thin">
+                <div className="min-w-max flex justify-center py-4">
+                    <svg width="700" height="500" className="mx-auto block">
+                        {/* Draw path edges */}
+                        {path.length > 1 && path.map((cityId, idx) => {
+                            if (idx === path.length - 1) return null;
 
-                        const city1 = cities.find(c => c.id === cityId);
-                        const city2 = cities.find(c => c.id === path[idx + 1]);
+                            const city1 = cities.find(c => c.id === cityId);
+                            const city2 = cities.find(c => c.id === path[idx + 1]);
 
-                        if (!city1 || !city2) return null;
+                            if (!city1 || !city2) return null;
 
-                        const distance = calculateDistance(city1, city2);
+                            const distance = calculateDistance(city1, city2);
 
-                        return (
-                            <g key={`edge-${idx}`}>
-                                <line
-                                    x1={city1.x}
-                                    y1={city1.y}
-                                    x2={city2.x}
-                                    y2={city2.y}
-                                    stroke="#3b82f6"
-                                    strokeWidth="3"
-                                    className="transition-all duration-300"
-                                />
-                                {/* Distance label */}
-                                <text
-                                    x={(city1.x + city2.x) / 2}
-                                    y={(city1.y + city2.y) / 2 - 10}
-                                    fill="#60a5fa"
-                                    fontSize="12"
-                                    fontWeight="bold"
-                                    textAnchor="middle"
-                                >
-                                    {distance.toFixed(1)}
-                                </text>
-                                {/* Arrow */}
-                                <marker
-                                    id={`arrow-${idx}`}
-                                    markerWidth="10"
-                                    markerHeight="10"
-                                    refX="8"
-                                    refY="3"
-                                    orient="auto"
-                                    markerUnits="strokeWidth"
-                                >
-                                    <path d="M0,0 L0,6 L9,3 z" fill="#3b82f6" />
-                                </marker>
-                            </g>
-                        );
-                    })}
-
-                    {/* Draw cities */}
-                    {cities.map((city) => {
-                        const isInPath = path.includes(city.id);
-                        const pathIndex = path.indexOf(city.id);
-
-                        return (
-                            <g key={city.id}>
-                                <circle
-                                    cx={city.x}
-                                    cy={city.y}
-                                    r="20"
-                                    fill={isInPath ? '#22c55e' : '#1e293b'}
-                                    stroke={isInPath ? '#4ade80' : '#475569'}
-                                    strokeWidth="3"
-                                    className="transition-all duration-300"
-                                />
-                                <text
-                                    x={city.x}
-                                    y={city.y}
-                                    textAnchor="middle"
-                                    dominantBaseline="middle"
-                                    fill="#fff"
-                                    fontSize="14"
-                                    fontWeight="bold"
-                                >
-                                    {city.name}
-                                </text>
-                                {isInPath && pathIndex !== -1 && (
+                            return (
+                                <g key={`edge-${idx}`}>
+                                    <line
+                                        x1={city1.x}
+                                        y1={city1.y}
+                                        x2={city2.x}
+                                        y2={city2.y}
+                                        stroke="#3b82f6"
+                                        strokeWidth="3"
+                                        className="transition-all duration-300"
+                                    />
+                                    {/* Distance label */}
                                     <text
-                                        x={city.x}
-                                        y={city.y - 35}
-                                        textAnchor="middle"
-                                        fill="#22c55e"
+                                        x={(city1.x + city2.x) / 2}
+                                        y={(city1.y + city2.y) / 2 - 10}
+                                        fill="#60a5fa"
                                         fontSize="12"
                                         fontWeight="bold"
+                                        textAnchor="middle"
                                     >
-                                        #{pathIndex + 1}
+                                        {distance.toFixed(1)}
                                     </text>
-                                )}
-                            </g>
-                        );
-                    })}
-                </svg>
+                                    {/* Arrow */}
+                                    <marker
+                                        id={`arrow-${idx}`}
+                                        markerWidth="10"
+                                        markerHeight="10"
+                                        refX="8"
+                                        refY="3"
+                                        orient="auto"
+                                        markerUnits="strokeWidth"
+                                    >
+                                        <path d="M0,0 L0,6 L9,3 z" fill="#3b82f6" />
+                                    </marker>
+                                </g>
+                            );
+                        })}
+
+                        {/* Draw cities */}
+                        {cities.map((city) => {
+                            const isInPath = path.includes(city.id);
+                            const pathIndex = path.indexOf(city.id);
+
+                            return (
+                                <g key={city.id}>
+                                    <circle
+                                        cx={city.x}
+                                        cy={city.y}
+                                        r="20"
+                                        fill={isInPath ? '#22c55e' : '#1e293b'}
+                                        stroke={isInPath ? '#4ade80' : '#475569'}
+                                        strokeWidth="3"
+                                        className="transition-all duration-300"
+                                    />
+                                    <text
+                                        x={city.x}
+                                        y={city.y}
+                                        textAnchor="middle"
+                                        dominantBaseline="middle"
+                                        fill="#fff"
+                                        fontSize="14"
+                                        fontWeight="bold"
+                                    >
+                                        {city.name}
+                                    </text>
+                                    {isInPath && pathIndex !== -1 && (
+                                        <text
+                                            x={city.x}
+                                            y={city.y - 35}
+                                            textAnchor="middle"
+                                            fill="#22c55e"
+                                            fontSize="12"
+                                            fontWeight="bold"
+                                        >
+                                            #{pathIndex + 1}
+                                        </text>
+                                    )}
+                                </g>
+                            );
+                        })}
+                    </svg>
+                </div>
             </div>
 
             {/* Path Sequence */}

@@ -207,20 +207,20 @@ print(f"Target: {target}")`,
     };
 
     return (
-        <div className="min-h-screen bg-slate-900 text-slate-50 p-8">
-            <div className="max-w-7xl mx-auto space-y-8">
+        <div className="min-h-screen bg-slate-900 text-slate-50 p-4 sm:p-8">
+            <div className="max-w-7xl mx-auto space-y-6 sm:space-y-8">
                 {/* Header */}
-                <div className="bg-slate-800 rounded-lg p-6 border border-slate-700">
-                    <div className="flex items-center justify-between">
+                <div className="bg-slate-800 rounded-lg p-4 sm:p-6 border border-slate-700">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                         <div>
-                            <h1 className="text-4xl font-bold text-gray-100 mb-2">{algorithmData.title}</h1>
+                            <h1 className="text-3xl sm:text-4xl font-bold text-gray-100 mb-2">{algorithmData.title}</h1>
                             <span className="algorithm-badge badge-searching">{algorithmData.category}</span>
                         </div>
                     </div>
                 </div>
 
                 {/* Definition */}
-                <div className="bg-slate-800 rounded-lg p-6 border border-slate-700">
+                <div className="bg-slate-800 rounded-lg p-4 sm:p-6 border border-slate-700">
                     <h2 className="section-title">What is Linear Search?</h2>
                     <p className="text-gray-300 leading-relaxed mb-4">{algorithmData.definition}</p>
                     <div className="bg-blue-900/30 border border-blue-500 rounded-lg p-4">
@@ -241,7 +241,7 @@ print(f"Target: {target}")`,
                 <WorkingSection steps={algorithmData.workingSteps} />
 
                 {/* Animation */}
-                <div className="bg-slate-800 rounded-lg p-6 border border-slate-700">
+                <div className="bg-slate-800 rounded-lg p-4 sm:p-6 border border-slate-700">
                     <h2 className="section-title">Interactive Visualization</h2>
                     <p className="text-gray-400 mb-6">
                         Watch how Linear Search examines each element sequentially until it finds the target value.

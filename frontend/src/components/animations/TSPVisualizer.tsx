@@ -118,15 +118,17 @@ const TSPVisualizer: React.FC<TSPVisualizerProps> = ({
                     <p className="text-gray-300 font-mono text-sm">{message}</p>
                 </div>
             )}
-            <div className="bg-slate-900 border border-slate-700 rounded-lg p-4 flex justify-center">
-                <canvas
-                    ref={canvasRef}
-                    width={600}
-                    height={400}
-                    className="bg-slate-900 rounded cursor-pointer"
-                />
+            <div className="bg-slate-900 border border-slate-700 rounded-lg p-2 sm:p-4 overflow-x-auto scrollbar-thin">
+                <div className="min-w-[600px] flex justify-center">
+                    <canvas
+                        ref={canvasRef}
+                        width={600}
+                        height={400}
+                        className="bg-slate-900 rounded cursor-pointer"
+                    />
+                </div>
             </div>
-            <div className="flex justify-center gap-6 text-sm">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-6 text-xs sm:text-sm">
                 <div className="flex items-center gap-2">
                     <div className="w-4 h-1 bg-green-500"></div>
                     <span className="text-gray-300">Best Path</span>

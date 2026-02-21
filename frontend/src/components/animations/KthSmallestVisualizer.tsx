@@ -26,7 +26,7 @@ const KthSmallestVisualizer: React.FC<KthSmallestVisualizerProps> = ({
                 <p className="text-xs text-gray-500 mt-2">Looking for {k}-th smallest element (Index {k - 1})</p>
             </div>
 
-            <div className="flex justify-center items-end gap-2 h-64 bg-slate-900/50 p-4 rounded-lg border border-slate-800 overflow-x-auto">
+            <div className="flex justify-center items-end gap-1 sm:gap-2 h-48 sm:h-64 bg-slate-900/50 p-2 sm:p-4 rounded-lg border border-slate-800 overflow-x-auto scrollbar-thin">
                 {array.map((value, idx) => {
                     let bgColor = 'bg-blue-500'; // Default
                     let borderColor = 'border-blue-600';
@@ -53,10 +53,10 @@ const KthSmallestVisualizer: React.FC<KthSmallestVisualizerProps> = ({
                         <div key={idx} className="flex flex-col items-center gap-2 group relative">
                             <span className="text-xs text-gray-400 font-mono">{idx}</span>
                             <div
-                                className={`w-12 rounded-t-lg border-2 transition-all duration-300 ${bgColor} ${borderColor} flex items-end justify-center`}
+                                className={`w-8 sm:w-12 rounded-t-lg border-2 transition-all duration-300 ${bgColor} ${borderColor} flex items-end justify-center`}
                                 style={{ height: `${height}%` }}
                             >
-                                <span className="mb-2 text-white font-bold shadow-black drop-shadow-md">{value}</span>
+                                <span className="mb-1 sm:mb-2 text-xs sm:text-base text-white font-bold shadow-black drop-shadow-md">{value}</span>
                             </div>
 
                             {/* Helpers/Pointers */}
@@ -70,7 +70,7 @@ const KthSmallestVisualizer: React.FC<KthSmallestVisualizerProps> = ({
                 })}
             </div>
 
-            <div className="flex justify-center gap-4 text-sm">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 text-xs sm:text-sm">
                 <div className="flex items-center gap-2">
                     <div className="w-4 h-4 bg-yellow-500 rounded"></div>
                     <span className="text-gray-400">Pivot</span>

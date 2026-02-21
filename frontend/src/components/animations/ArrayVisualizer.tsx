@@ -45,11 +45,11 @@ const ArrayVisualizer: React.FC<ArrayVisualizerProps> = ({
     return (
         <div className="space-y-4">
             {/* Controls */}
-            <div className="flex items-center justify-between bg-dark-elevated rounded-lg p-4 border border-dark-border">
-                <div className="flex items-center gap-2">
+            <div className="flex flex-col sm:flex-row items-center justify-between bg-dark-elevated rounded-lg p-4 border border-dark-border gap-4">
+                <div className="flex flex-wrap items-center justify-center gap-2 w-full sm:w-auto">
                     <button
                         onClick={onPlayPause}
-                        className="btn btn-primary flex items-center gap-2"
+                        className="btn btn-primary flex items-center gap-2 flex-1 sm:flex-none justify-center"
                         disabled={!onPlayPause}
                     >
                         {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
@@ -57,7 +57,7 @@ const ArrayVisualizer: React.FC<ArrayVisualizerProps> = ({
                     </button>
                     <button
                         onClick={onStep}
-                        className="btn btn-secondary flex items-center gap-2"
+                        className="btn btn-secondary flex items-center gap-2 flex-1 sm:flex-none justify-center"
                         disabled={!onStep || isPlaying}
                     >
                         <SkipForward className="w-4 h-4" />
@@ -65,7 +65,7 @@ const ArrayVisualizer: React.FC<ArrayVisualizerProps> = ({
                     </button>
                     <button
                         onClick={onReset}
-                        className="btn btn-secondary flex items-center gap-2"
+                        className="btn btn-secondary flex items-center gap-2 flex-1 sm:flex-none justify-center"
                         disabled={!onReset}
                     >
                         <RotateCcw className="w-4 h-4" />
@@ -98,8 +98,8 @@ const ArrayVisualizer: React.FC<ArrayVisualizerProps> = ({
             )}
 
             {/* Array Visualization */}
-            <div className="bg-dark-elevated rounded-lg p-8 border border-dark-border">
-                <div className="flex items-end justify-center gap-2 min-h-[300px]">
+            <div className="bg-dark-elevated rounded-lg p-4 sm:p-8 border border-dark-border overflow-x-auto scrollbar-thin">
+                <div className="flex items-end justify-center min-w-max gap-2 min-h-[300px] px-2">
                     {array.map((value, index) => {
                         const height = typeof value === 'number' && maxValue > 0
                             ? (value / maxValue) * 250

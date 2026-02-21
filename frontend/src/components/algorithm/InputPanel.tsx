@@ -63,8 +63,8 @@ const InputPanel: React.FC<InputPanelProps> = ({ defaultInputs, onInputChange, i
     return (
         <div className="card">
             <h2 className="section-title">Interactive Input Panel</h2>
-            <p className="text-gray-400 mb-4">
-                Modify the input values below and click "Apply Changes" to update the visualization and code execution.
+            <p className="text-gray-400 mb-4 text-sm sm:text-base">
+                Modify the input values below and click "Apply Changes" to update the visualization.
             </p>
 
             <div className="space-y-4">
@@ -77,7 +77,7 @@ const InputPanel: React.FC<InputPanelProps> = ({ defaultInputs, onInputChange, i
                         {field.type === 'processes' ? (
                             <div className="space-y-3">
                                 {(inputs[field.key] || []).map((process: Process, index: number) => (
-                                    <div key={index} className="bg-dark-elevated border border-dark-border rounded-lg p-4">
+                                    <div key={index} className="bg-dark-elevated border border-dark-border rounded-lg p-3 sm:p-4">
                                         <div className="flex items-center justify-between mb-3">
                                             <span className="text-primary-400 font-semibold">{process.id}</span>
                                             <button
@@ -88,7 +88,7 @@ const InputPanel: React.FC<InputPanelProps> = ({ defaultInputs, onInputChange, i
                                                 <Trash2 className="w-4 h-4" />
                                             </button>
                                         </div>
-                                        <div className="grid grid-cols-3 gap-3">
+                                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
                                             <div>
                                                 <label className="block text-xs text-gray-400 mb-1">Arrival Time</label>
                                                 <input
@@ -159,11 +159,11 @@ const InputPanel: React.FC<InputPanelProps> = ({ defaultInputs, onInputChange, i
                 ))}
             </div>
 
-            <div className="flex gap-3 mt-6">
+            <div className="flex flex-col sm:flex-row gap-3 mt-6">
                 <button onClick={handleApply} className="btn btn-primary flex-1">
                     Apply Changes
                 </button>
-                <button onClick={handleReset} className="btn btn-secondary flex items-center gap-2">
+                <button onClick={handleReset} className="btn btn-secondary flex items-center justify-center gap-2 flex-1 sm:flex-none">
                     <RotateCcw className="w-4 h-4" />
                     Reset to Default
                 </button>

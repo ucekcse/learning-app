@@ -38,20 +38,20 @@ const Home: React.FC = () => {
         <div className="min-h-screen bg-dark-bg">
             {/* Hero Section */}
             <div className="bg-dark-surface border-b border-dark-border">
-                <div className="max-w-6xl mx-auto px-8 py-16">
+                <div className="max-w-6xl mx-auto px-4 sm:px-8 py-12 sm:py-16">
                     <div className="text-center">
-                        <h1 className="text-5xl font-bold text-gray-100 mb-4">
-                            Master Algorithms Through
+                        <h1 className="text-4xl sm:text-5xl font-bold text-gray-100 mb-4 sm:mb-6 leading-tight">
+                            Master Algorithms Through <br className="hidden sm:block" />
                             <span className="text-primary-500"> Interactive Learning</span>
                         </h1>
-                        <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
+                        <p className="text-lg sm:text-xl text-gray-400 mb-8 max-w-3xl mx-auto px-2">
                             A comprehensive platform for computer science students to understand algorithms deeply through visualizations, live code execution, and hands-on experimentation.
                         </p>
-                        <div className="flex gap-4 justify-center">
-                            <Link to="/algorithm/linear-search" className="btn btn-primary text-lg px-8 py-3">
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                            <Link to="/algorithm/linear-search" className="btn btn-primary w-full sm:w-auto text-lg px-8 py-3">
                                 Start Learning
                             </Link>
-                            <a href="#categories" className="btn btn-secondary text-lg px-8 py-3">
+                            <a href="#categories" className="btn btn-secondary w-full sm:w-auto text-lg px-8 py-3">
                                 Explore Topics
                             </a>
                         </div>
@@ -60,8 +60,8 @@ const Home: React.FC = () => {
             </div>
 
             {/* Features Section */}
-            <div className="max-w-6xl mx-auto px-8 py-16">
-                <h2 className="text-3xl font-bold text-gray-100 mb-12 text-center">
+            <div className="max-w-6xl mx-auto px-4 sm:px-8 py-12 sm:py-16">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-100 mb-8 sm:mb-12 text-center">
                     Why Choose AlgoLearn?
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -76,8 +76,8 @@ const Home: React.FC = () => {
             </div>
 
             {/* Categories Section */}
-            <div id="categories" className="max-w-6xl mx-auto px-8 py-16">
-                <h2 className="text-3xl font-bold text-gray-100 mb-12 text-center">
+            <div id="categories" className="max-w-6xl mx-auto px-4 sm:px-8 py-12 sm:py-16">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-100 mb-8 sm:mb-12 text-center">
                     Algorithm Categories
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -102,8 +102,8 @@ const Home: React.FC = () => {
 
             {/* CTA Section */}
             <div className="bg-dark-surface border-t border-dark-border">
-                <div className="max-w-6xl mx-auto px-8 py-16 text-center">
-                    <h2 className="text-3xl font-bold text-gray-100 mb-4">
+                <div className="max-w-6xl mx-auto px-4 sm:px-8 py-12 sm:py-16 text-center">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-100 mb-4">
                         Ready to Master Algorithms?
                     </h2>
                     <p className="text-gray-400 mb-8 max-w-2xl mx-auto">

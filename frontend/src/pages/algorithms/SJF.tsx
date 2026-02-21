@@ -220,7 +220,7 @@ sjf_scheduling(processes)`,
     };
 
     return (
-        <div className="min-h-screen bg-slate-50 dark:bg-slate-900 p-8">
+        <div className="min-h-screen bg-slate-50 dark:bg-slate-900 p-3 sm:p-8">
             <div className="max-w-7xl mx-auto space-y-8">
                 <div className="card">
                     <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-50 mb-2">{algorithmData.title}</h1>
@@ -250,7 +250,7 @@ sjf_scheduling(processes)`,
                     <p className="text-gray-600 dark:text-gray-400 mb-6">
                         Process execution timeline showing SJF scheduling order.
                     </p>
-                    <div className="bg-slate-100 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg p-8">
+                    <div className="bg-slate-100 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg p-4 sm:p-8">
                         <p className="text-gray-700 dark:text-gray-200 text-center">
                             SJF selects the process with shortest burst time, minimizing average waiting time.
                         </p>

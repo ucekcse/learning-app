@@ -184,7 +184,7 @@ for row in closure:
     }, [isPlaying, currentStepIndex]);
 
     return (
-        <div className="min-h-screen bg-dark-bg p-8">
+        <div className="min-h-screen bg-dark-bg p-3 sm:p-8">
             <div className="max-w-7xl mx-auto space-y-8">
                 <div className="card">
                     <h1 className="text-4xl font-bold text-gray-100 mb-2">{algorithmData.title}</h1>
